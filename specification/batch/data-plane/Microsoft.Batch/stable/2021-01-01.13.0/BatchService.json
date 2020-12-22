@@ -10973,7 +10973,7 @@
     },
     "ImageInformation": {
       "properties": {
-        "nodeAgentSKUId": {
+        "nodeAgentSkuId": {
           "type": "string",
           "title": "The ID of the Compute Node agent SKU which the Image supports."
         },
@@ -11043,7 +11043,7 @@
         "imageReference",
         "verificationType",
         "osType",
-        "nodeAgentSKUId"
+        "nodeAgentSkuId"
       ],
       "title": "A reference to the Azure Virtual Machines Marketplace Image and additional information about the Image."
     },
@@ -11563,7 +11563,8 @@
         },
         "properties": {
           "$ref": "#/definitions/FileProperties",
-          "title": "The file properties."
+          "title": "The file properties.",
+          "x-ms-client-flatten": true
         }
       },
       "title": "Information about a file or directory on a Compute Node."
@@ -13775,7 +13776,7 @@
           "$ref": "#/definitions/ImageReference",
           "title": "A reference to the Azure Virtual Machines Marketplace Image or the custom Virtual Machine Image to use."
         },
-        "nodeAgentSKUId": {
+        "nodeAgentSkuId": {
           "type": "string",
           "title": "The SKU of the Batch Compute Node agent to be provisioned on Compute Nodes in the Pool.",
           "description": "The Batch Compute Node agent is a program that runs on each Compute Node in the Pool, and provides the command-and-control interface between the Compute Node and the Batch service. There are different implementations of the Compute Node agent, known as SKUs, for different operating systems. You must specify a Compute Node agent SKU which matches the selected Image reference. To get the list of supported Compute Node agent SKUs along with their list of verified Image references, see the 'List supported Compute Node agent SKUs' operation."
@@ -13823,7 +13824,7 @@
         }
       },
       "required": [
-        "nodeAgentSKUId",
+        "nodeAgentSkuId",
         "imageReference"
       ],
       "title": "The configuration for Compute Nodes in a Pool based on the Azure Virtual Machines infrastructure."
