@@ -35,7 +35,7 @@ These settings apply only when `--tag=package-2021-01.13.0` is specified on the 
 
 ``` yaml $(tag) == 'package-2021-01.13.0'
 input-file:
-- Microsoft.Batch/stable/2021-01-01.13.0.0/BatchService.json
+- Microsoft.Batch/stable/2021-01-01.13.0/BatchService.json
 ```
 
 ### Tag: package-2020-09.12.0
